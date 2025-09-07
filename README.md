@@ -6,11 +6,16 @@ Note: Each subfolder preserves the original project’s structure and license. P
 
 ## What’s Inside
 
-- 00-Cow_lameness_detection_using_pose_estimation_and_multiple_locomotion_traits_2024 — “Russello et al. (2024)”
+- **00 - Russello (2024): Video‑based Lameness Detection**
+  - Paper: [Video-based automatic lameness detection of dairy cows using pose estimation and multiple locomotion traits - Russello et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0168169924004319)  
+  - Source Code: [lameness-detection](https://github.com/hrussel/lameness-detection)
+  -   
 - 01-Animal-Behaviour-Inference-Framework_2025 — “Price (Smarter‑Labelme + Behaviour Workflow)”
 - 02-behave_2025 — “BEHAVE (Browser‑based Behaviour Coding)”
 - 03-YORU_2023 — “YORU (End‑to‑End YOLO/GUI Pipeline)”
 
+<img src="03-YORU_2023/logos/YORU_logo.png" width="40%">
+<img src="03-YORU_2023/docs/imgs/title_movie.gif" width="50%">
 ## Project Overviews
 
 **Russello (2024): Video‑based Lameness Detection**
@@ -34,6 +39,9 @@ Note: Each subfolder preserves the original project’s structure and license. P
 - Learn more: `02-behave_2025/static/index.md` (includes quick start and app links in the original site structure).
 
 **YORU (2023): End‑to‑End YOLO/GUI Pipeline**
+<img src="03-YORU_2023/logos/YORU_logo.png" width="40%">
+<img src="03-YORU_2023/docs/imgs/title_movie.gif" width="50%">
+
 - Focus: A GUI suite for dataset creation, training, evaluation, offline analysis, and real‑time/closed‑loop processing.
 - How it works: Project‑oriented pipeline with frame capture, labeling GUIs, training utilities, and real‑time inference.
 - Try it: Requires Chrome, Conda, and PyTorch; run the module entry point.
