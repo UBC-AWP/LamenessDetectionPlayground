@@ -1,6 +1,6 @@
 # LamenessDetectionPlayground
 
-A curated playground of open-source projects for video-based animal behaviour analysis and dairy-cow lameness detection. This repository aggregates code and docs from several influential reference implementations so they can be compared, learned from, and extended side-by-side. Contributions that add more relevant projects are warmly welcome.
+A curated playground of open-source projects for video-based animal behaviour analysis and dairy-cow lameness detection. This repository aggregates code and docs from several interesting reference implementations so they can be compared, learned from, and extended side-by-side. Contributions that add more relevant projects are warmly welcome.
 
 Note: Each subfolder preserves the original project’s structure and license. Please read and follow the upstream licenses when using any code.
 
@@ -14,7 +14,7 @@ Note: Each subfolder preserves the original project’s structure and license. P
   - Paper: [Video-based automatic lameness detection of dairy cows using pose estimation and multiple locomotion traits - Russello et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0168169924004319)  
   - Source Code: [github](https://github.com/hrussel/lameness-detection)
   
-- **Price (2025): Animal Behaviour Inference Framework (Smarter‑Labelme + Behaviour Workflow)**
+- **01 - Price (2025): Animal Behaviour Inference Framework (Smarter‑Labelme + Behaviour Workflow)**
   <p align="center">
     <img src="01-Animal-Behaviour-Inference-Framework_2025/pic/0.png"  width="90%">
   </p>
@@ -22,7 +22,15 @@ Note: Each subfolder preserves the original project’s structure and license. P
   - Paper: [A framework for fast, large-scale, semi-automatic inference of animal behaviour from monocular videos](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.70124)  
   - Source Code: [github](https://github.com/robot-perception-group/Animal-Behaviour-Inference-Framework) / [zenodo](https://zenodo.org/records/15834944)
   - Datasets: [darus](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/DARUS-5162) / [keeper](https://keeper.mpdl.mpg.de/d/a9822e000aff4b5391e1/)
-- **02-behave_2025 — “BEHAVE (Browser‑based Behaviour Coding)”**
+
+- **02 - Elhorst (2025): Browser‑Based Behaviour Coding**
+  <p align="center">
+    <img src="02-behave_2025/pic/0.png"  width="90%">
+  </p>
+
+  - Paper: [A framework for fast, large-scale, semi-automatic inference of animal behaviour from monocular videos](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.70124)  
+  - Source Code: [github](https://github.com/behave-app/behave) 
+  - Website application address: [behave.claude-apps.com](https://behave.claude-apps.com/)
 - **03-YORU_2023 — “YORU (End‑to‑End YOLO/GUI Pipeline)”**
 
   <p align="center">
