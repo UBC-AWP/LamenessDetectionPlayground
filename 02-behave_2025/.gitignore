@@ -1,0 +1,6 @@
+/thirdparty/
+/video.mp4
+/public/
+/node_modules/
+cypress/screenshots/
+cypress/downloads

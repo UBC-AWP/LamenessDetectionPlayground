@@ -1,0 +1,31 @@
+name: demo_VR
+
+root: 'C:/Users/nokai/Documents/GitHub/Asovi_VR/'
+
+export: 'camera_test/'
+export_name: 'YMH_100'
+
+
+model:
+ yolo_detection: False
+ yolo_model_path: './config/yolov5s.pt'
+ Trigger: False
+
+capture_style:
+ stream_MSS: False
+
+
+trigger:
+ trigger_threshold_configuration: 0.5
+ trigger_class: 'cell phone'
+ Arduino_COM: 'None'
+ trigger_style: "straight_display"
+ 
+hardware:
+ use_camera: True
+ camera_id: 0
+ camera_width: 640
+ camera_height: 480
+ camera_scale: 1
+ camera_fps: 30
+ camera_imshow: False # opencv-window

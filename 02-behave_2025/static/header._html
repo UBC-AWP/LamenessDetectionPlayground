@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Behave</title>
+    <link rel="stylesheet" href="$(BASEDIR)/assets/main.css">
+    <link rel="icon" type="image/svg" href="$(BASEDIR)/assets/favicon.svg">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+  <div class="page_header">
+    <h1 class="title"><a href="$(BASEDIR)/index.html">BEHAVE</a></h1>
+    <h2 class="subtitle">Behaviour Extraction by Humans and AI from Video</h2>
+    <div class="logo">
+      <a href="$(BASEDIR)/index.html"><img alt="logo" src="$(BASEDIR)/assets/logo-128.svg"></a>
+    </div>
+  </div>
+  <div class="page_content">

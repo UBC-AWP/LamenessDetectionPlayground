@@ -1,0 +1,95 @@
+.canvas {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+
+  &.dummy {
+    background-color: grey;
+    aspect-ratio: 16 / 9;
+    padding: 1em;
+  }
+}
+
+.container {
+  .canvas {
+    width: var(--video-width);
+    height: var(--video-height);
+  }
+  width: calc(var(--zoom) * 100%);
+  height: calc(var(--zoom) * 100%);
+  transition: width .3s, height .3s;
+  position: relative;
+  left: calc(var(--focus-x) * (1 - var(--video-zoom)));
+  top: calc(var(--focus-y) * (1 - var(--video-zoom)));
+}
+
+.overlay {
+  position: absolute;
+  --box-stroke-width: 3px;
+  --text-width: 2.1em;
+  --text-height: 1lh;
+  --text-size: .8em;
+  font-size: var(--text-size);
+  font-variant-numeric: tabular-nums;
+  .detection {
+    &.hide {
+
+    }
+    &.hide_confidence {
+      .confidence_background, .confidence_text {
+        display: none;
+      }
+    }
+    &.outer {
+      --vertical_shift: calc(var(--box-stroke-width) + var(--text-height));
+      --horizontal_shift: var(--box-stroke-width);
+    }
+    &.inner {
+      --vertical_shift: 0px;
+      --horizontal_shift: 0px;
+    }
+    &.bottom {
+      --preferred_y: calc((var(--cy) + var(--height) / 2) * var(--video-height) - var(--text-height) + var(--vertical_shift));
+    }
+    &.top {
+      --preferred_y: calc((var(--cy) - var(--height) / 2) * var(--video-height) - var(--vertical_shift));
+    }
+    &.left {
+      --preferred_x: calc((var(--cx) - var(--width) / 2) * var(--video-width) - var(--horizontal_shift))
+    }
+    &.center {
+      --preferred_x: calc(var(--cx) * var(--video-width) - var(--text-width) / 2);
+    }
+    &.right {
+      --preferred_x: calc((var(--cx) + var(--width) / 2) * var(--video-width) - var(--text-width) + var(--horizontal_shift));
+    }
+    --textbox-x: calc(clamp(0%, var(--preferred_x), var(--video-width) - var(--text-width)));
+    --textbox-y: calc(clamp(0%, var(--preferred_y), var(--video-height) - var(--text-height)));
+    opacity: calc(var(--box-alpha) * 100%);
+    .box {
+      fill: none;
+      stroke: var(--box-colour);
+      stroke-width: var(--box-stroke-width);
+      x: calc((var(--cx) - var(--width) / 2) * var(--video-width) - var(--box-stroke-width) / 2);
+      y: calc((var(--cy) - var(--height) / 2) * var(--video-height) - var(--box-stroke-width) / 2);
+      width: calc(var(--width) * var(--video-width) + var(--box-stroke-width));
+      height: calc(var(--height) * var(--video-height) + var(--box-stroke-width));
+    }
+    .confidence_background {
+      stroke: none;
+      fill: var(--box-colour);
+      x: var(--textbox-x);
+      y: var(--textbox-y);
+      width: var(--text-width);
+      height: var(--text-height);
+    }
+    .confidence_text {
+      stroke: none;
+      fill: var(--text-colour);
+      transform: translate(
+      calc(var(--textbox-x) + 1px),
+      calc(var(--textbox-y) + var(--text-height) - .2lh)
+      );
+    }
+  }
+}

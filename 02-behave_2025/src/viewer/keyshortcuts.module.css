@@ -1,0 +1,164 @@
+.intro {
+  margin: .9em 3em;
+  opacity: 0.5;
+  font-size: .9em;
+}
+.shortcut_list {
+  padding: 0 2em;
+
+  --column-gap: .7em;
+  column-gap: var(--column-gap);
+  column-width: 20em;
+  .item {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    .button {
+      &.activated {
+        background-color: hsl(0, 0%, 70%);
+      }
+      &.has_duplicate {
+        background-color: hsl(0, 70%, 70%);
+      }
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      height: 1.5lh;
+
+      .keys {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: fit-content 0 0;
+        max-width: 50%;
+        display: inline-block;
+        .key {
+          display: inline-block;
+          margin-left: .7em;
+          &:not(:last-child)::after {
+            content: ", ";
+          }
+        }
+      }
+      .title {
+        margin-left: .7em;
+        display: inline-block;
+        flex-grow: 2;
+        flex-shrink: 2;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.title {
+  &:not(input):empty, &:is(input:placeholder-shown) {
+    color: hsl(195, 20%, 50%, .5);
+    &::after{
+      content: "<empty>"
+    }
+  }
+}
+.current_preset_select {
+  margin: 1.5em;
+  & > div {
+    display: flex;
+    column-gap: 0.7em;
+    & > select {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      min-width: 5em;
+    }
+  }
+}
+
+.edit_dialog {
+  max-width: 50vw;
+  h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    column-gap: 1.3em;
+    .icon {
+      font-size: 2em;
+      flex: 0 0 fit-content;
+    }
+    .title {
+      flex: 1;
+      &.invalid_title {
+        background-color: hsl(0, 70%, 70%);
+      }
+    }
+  }
+  h3 {}
+  .duplicate_keys_explain {
+    color: hsl(0, 70%, 20%);
+  }
+  .shortcuts {
+    padding: 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    .add_button_small {
+      border: none;
+      background-color: unset;
+      &:hover {
+        background-color: hsl(0, 0%, 0%, .2);
+      }
+    }
+    .key_list {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: stretch;
+      width: 100%;
+      .shortcut_row {
+        display: flex;
+        flex-flow: row nowrap;
+        &:hover {
+          background-color: hsl(0, 0%, 0%, .1);
+        }
+        button {
+          flex: 0 0 2em;
+          border: none;
+          background-color: unset;
+          &:hover:not(:disabled) {
+            background-color: hsl(0, 0%, 0%, .2);
+          }
+        }
+        .shortcut_key  {
+          height: 1.3lh;
+          box-sizing: border-box;
+          flex-grow: 1;
+        }
+        &.shortcut_is_duplicate {
+          background-color: hsl(0, 70%, 70%);
+        }
+        &.editing_key .shortcut_key {
+          background-color: hsl(0, 0%, 100%, .8);
+          border: 2px solid hsl(240, 100%, 40%, .8);
+          &:empty{
+            color: silver;
+            &::after {
+              content: "<recording keystroke> (press key now)";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.error_popup {
+  max-width: 50vw;
+  div {
+    margin: 1.5em 0;
+  }
+}
+.confirm_box {
+  max-width: 40vw;
+}

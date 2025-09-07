@@ -1,0 +1,108 @@
+auto_run: false
+auto_save: true
+canvas:
+  double_click: null
+default_shape_color: null
+display_label_popup: true
+dnndevice: null
+epsilon: 10.0
+file_dock:
+  closable: true
+  floatable: true
+  movable: true
+  show: true
+file_search: null
+fit_to_content:
+  column: true
+  row: false
+flag_dock:
+  closable: true
+  floatable: true
+  movable: true
+  show: true
+flagmodel: null
+flags: null
+freeze_key_frames: false
+global_translation_track_size: 100
+image_skip: 1
+keep_prev: false
+keep_prev_scale: true
+label_colors: null
+label_completion: startswith
+label_dock:
+  closable: true
+  floatable: true
+  movable: true
+  show: true
+label_flags: null
+labels: null
+logger_level: info
+re3model: null
+shape_color: auto
+shape_dock:
+  closable: true
+  floatable: true
+  movable: true
+  show: true
+shift_auto_shape_color: 0
+shortcuts:
+  add_point_to_edge: Ctrl+Shift+P
+  autoAnnotate: null
+  close: Ctrl+W
+  create_autocontour: Ctrl+A
+  create_circle: null
+  create_line: null
+  create_linestrip: null
+  create_point: null
+  create_polygon: Ctrl+P
+  create_rectangle: Ctrl+R
+  decrease_blend:
+  - P
+  delete_file: Ctrl+Delete
+  delete_polygon: Delete
+  duplicate_polygon: Ctrl+C
+  edit_label: Ctrl+E
+  edit_polygon:
+  - Ctrl+J
+  - Escape
+  fit_width: Ctrl+Shift+F
+  fit_window: Ctrl+F
+  increase_blend:
+  - O
+  open: null
+  open_dir: Ctrl+D
+  open_next:
+  - Right
+  - Alt+Right
+  open_prev:
+  - Left
+  - Alt+Left
+  open_seg: Ctrl+O
+  quit: Ctrl+Q
+  save: Ctrl+S
+  save_as: Ctrl+Shift+S
+  save_to: null
+  startStopAutoMode: Ctrl+Space
+  toggle_keep_prev_mode: null
+  toggle_tracker:
+  - Ctrl+T
+  undo: Ctrl+Z
+  undo_last_point:
+  - Ctrl+Z
+  - Backspace
+  zoom_in:
+  - Ctrl++
+  - Ctrl+=
+  zoom_out: Ctrl+-
+  zoom_to_original: Ctrl+0
+show_label_text_field: true
+sort_labels: true
+ssd_min_resolution: 300
+ssd_re3_correction_alpha: 0.8
+ssd_re3_correction_min_iou: 0.8
+ssd_threshold_autoannotation: 0.15
+ssd_track_crop_factor: 3.0
+ssdmodel: null
+store_data: false
+validate_label: null
+version: 5.2.10

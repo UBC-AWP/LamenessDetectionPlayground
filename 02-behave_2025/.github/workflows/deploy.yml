@@ -1,0 +1,100 @@
+name: Deploy to AWS (release)
+on:
+  release:
+    types: [created]
+  push:
+    branches:
+      - "main"
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed in order to find version number
+          fetch-tags: true  # needed in order to find version number
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          buildkitd-flags: --debug
+      - name: restore libavjs cache
+        uses: actions/cache@v4
+        with:
+          key: libavjs-files--${{ hashFiles('libav.js/*') }}
+          path: public/app/bundled/
+      - name: update cache timestamps
+        # this will update the timestamps on the cache
+        # this is necessary since the Dockerfile will always be newer (gets
+        # checkout timestamp).
+        # However because of the hash, cache only gets restored if the Dockerfile
+        # is unchanged.
+        run: make -t public/app/bundled/libavjs || true
+      - name: Build
+        run: DOCKER="docker buildx" DOCKER_TMPDIR=/tmp ENVIRONMENT=production make lint build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: built-app
+          path: public
+  test:
+    runs-on: macos-latest  # turns out that macos is much much faster :)
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/download-artifact@master
+        name: Download artifact
+        with:
+          name: built-app
+          path: public
+      - name: Run cypress
+        id: cypress
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        if: failure() && steps.cypress.outcome == 'failure'
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+  deploy-beta:
+    runs-on: ubuntu-22.04
+    if: github.event_name == 'push'
+    needs: test
+    steps:
+      - uses: actions/download-artifact@master
+        name: Download artifact
+        with:
+          name: built-app
+          path: public
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::442430797903:role/behave-claude-apps-com-UploadRole-bcTUZbepmRpa
+      - name: Deploy to beta
+        env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+        run: aws s3 sync --delete --content-encoding utf8 public "s3://behave.claude-apps.com/website/beta/${BRANCH_NAME}"
+  deploy-release:
+    runs-on: ubuntu-22.04
+    if: github.event_name == 'release' && github.event.action == 'created'
+    needs: test
+    steps:
+      - uses: actions/download-artifact@master
+        name: Download artifact
+        with:
+          name: built-app
+          path: public
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::442430797903:role/behave-claude-apps-com-UploadRole-bcTUZbepmRpa
+      - name: Deploy to live
+        run: aws s3 sync --delete --exclude=beta/\* --content-encoding utf8 public s3://behave.claude-apps.com/website/

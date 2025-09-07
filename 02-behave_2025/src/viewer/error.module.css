@@ -1,0 +1,28 @@
+.action_already_in_use,
+.shortcut_preset_export_error, .shortcut_preset_import_error {
+  width: 50vw;
+}
+
+.multiple_actions_assigned_to_pressed_key_exception {
+  width: 40vw;
+  .multiple_action_choices {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    > button {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &.activated {
+        background-color: hsl(0, 0%, 70%);
+      }
+    }
+  }
+}
+
+.behaviour_file_write_error {
+  width: 50vw;
+  div, details {
+    margin: 1.3em;
+  }
+}
