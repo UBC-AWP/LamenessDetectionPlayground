@@ -7,15 +7,27 @@ Note: Each subfolder preserves the original project’s structure and license. P
 ## What’s Inside
 
 - **00 - Russello (2024): Video‑based Lameness Detection**
-  <img src="00-Cow_lameness_detection_using_pose_estimation_and_multiple_locomotion_traits_2024/pic/0.jpg"  width="50%">
-  - Paper: [Video-based automatic lameness detection of dairy cows using pose estimation and multiple locomotion traits - Russello et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0168169924004319)  
-  - Source Code: [lameness-detection](https://github.com/hrussel/lameness-detection)
-  
-- 01-Animal-Behaviour-Inference-Framework_2025 — “Price (Smarter‑Labelme + Behaviour Workflow)”
-- 02-behave_2025 — “BEHAVE (Browser‑based Behaviour Coding)”
-- 03-YORU_2023 — “YORU (End‑to‑End YOLO/GUI Pipeline)”
+  <p align="center">
+    <img src="00-Cow_lameness_detection_using_pose_estimation_and_multiple_locomotion_traits_2024/pic/0.jpg"  width="50%">
+  </p>
 
-  <img src="03-YORU_2023/docs/imgs/title_movie.gif" width="50%">
+  - Paper: [Video-based automatic lameness detection of dairy cows using pose estimation and multiple locomotion traits - Russello et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0168169924004319)  
+  - Source Code: [github](https://github.com/hrussel/lameness-detection)
+  
+- **Price (2025): Animal Behaviour Inference Framework (Smarter‑Labelme + Behaviour Workflow)**
+  <p align="center">
+    <img src="01-Animal-Behaviour-Inference-Framework_2025/pic/0.png"  width="90%">
+  </p>
+
+  - Paper: [A framework for fast, large-scale, semi-automatic inference of animal behaviour from monocular videos](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.70124)  
+  - Source Code: [github](https://github.com/robot-perception-group/Animal-Behaviour-Inference-Framework) / [zenodo](https://zenodo.org/records/15834944)
+  - Datasets: [darus](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/DARUS-5162) / [keeper](https://keeper.mpdl.mpg.de/d/a9822e000aff4b5391e1/)
+- **02-behave_2025 — “BEHAVE (Browser‑based Behaviour Coding)”**
+- **03-YORU_2023 — “YORU (End‑to‑End YOLO/GUI Pipeline)”**
+
+  <p align="center">
+    <img src="03-YORU_2023/docs/imgs/title_movie.gif" width="50%">
+  </p>
 
 ## Project Overviews
 
@@ -40,8 +52,10 @@ Note: Each subfolder preserves the original project’s structure and license. P
 - Learn more: `02-behave_2025/static/index.md` (includes quick start and app links in the original site structure).
 
 **YORU (2023): End‑to‑End YOLO/GUI Pipeline**
-<img src="03-YORU_2023/logos/YORU_logo.png" width="40%">
-<img src="03-YORU_2023/docs/imgs/title_movie.gif" width="50%">
+
+<p align="center">
+  <img src="03-YORU_2023/logos/YORU_logo.png" width="40%">
+</p>
 
 - Focus: A GUI suite for dataset creation, training, evaluation, offline analysis, and real‑time/closed‑loop processing.
 - How it works: Project‑oriented pipeline with frame capture, labeling GUIs, training utilities, and real‑time inference.
