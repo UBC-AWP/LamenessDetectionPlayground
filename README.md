@@ -7,7 +7,7 @@ Note: Each subfolder preserves the original project’s structure and license. P
 ## What’s Inside
 
 - **00 - Russello (2024): Video‑based Lameness Detection**
-  <img src="00-Cow_lameness_detection_using_pose_estimation_and_multiple_locomotion_traits_2024/pic/0.jpg">
+  <img src="00-Cow_lameness_detection_using_pose_estimation_and_multiple_locomotion_traits_2024/pic/0.jpg"  width="50%">
   - Paper: [Video-based automatic lameness detection of dairy cows using pose estimation and multiple locomotion traits - Russello et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0168169924004319)  
   - Source Code: [lameness-detection](https://github.com/hrussel/lameness-detection)
   
