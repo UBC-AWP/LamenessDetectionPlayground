@@ -15,7 +15,7 @@ A playground of open-source projects that relate to video-based animal behaviour
 
   - Paper: [Video-based automatic lameness detection of dairy cows using pose estimation and multiple locomotion traits - Russello et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0168169924004319)  
   - Source Code: [github](https://github.com/hrussel/lameness-detection)
-  - Focus: Pose estimation + multiple locomotion traits to automatically detect lameness in dairy cows.
+  - Focus: Pose estimation + multiple locomotion traits to detect lameness in dairy cows automatically.
   - How it works: Extracts gait keypoints from video, computes locomotion features, and trains classical ML models for lameness classification.
   - Promised classification accuracy: 76.6%(1 trait); 79.9%(3 most important traits); 80.1%(6 locomotion traits)
   - Actual classification accuracy on processing AWP datasets: to be tested.
