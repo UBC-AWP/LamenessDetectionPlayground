@@ -18,7 +18,7 @@ A playground of open-source projects that relate to video-based animal behaviour
   - Focus: Pose estimation + multiple locomotion traits to detect lameness in dairy cows automatically.
   - How it works: Extracts gait keypoints from video, computes locomotion features, and trains classical ML models for lameness classification.
   - Promised classification accuracy: 76.6%(1 trait); 79.9%(3 most important traits); 80.1%(6 locomotion traits)
-  - Actual classification accuracy on processing AWP datasets: to be tested.
+  - Performance on AWP datasets: to be tested.
   
 - **01 - Price (2025): Animal Behaviour Inference Framework (Smarter‑Labelme + Behaviour Workflow)**
   <p align="center">
@@ -31,7 +31,7 @@ A playground of open-source projects that relate to video-based animal behaviour
   - Focus: A practical workflow built around Smarter‑Labelme to annotate, train animal detectors, and classify behaviours.
   - How it works: Three streams — S1 annotate/train detector, S2 label behaviours leveraging the detector, S3 semi‑automate behaviour annotation for rapid iteration.
   - Promised animal behavior labeling speed: 0.1 s per frame(on a computer with a fast GPU); 1–2 s per frame(on an office laptop without GPU)
-  - Actual animal behavior labeling speed on processing AWP datasets: to be tested.
+  - Performance on AWP datasets: to be tested.
 
 - **02 - Elhorst (2025): Browser‑Based Behaviour Coding**
   <p align="center">
@@ -55,7 +55,7 @@ A playground of open-source projects that relate to video-based animal behaviour
   - How it works: Project‑oriented pipeline with frame capture, labeling GUIs, training utilities, and real‑time inference.
   - Promised classification accuracy: >90%
   - Promised labeling speed: ~5ms per frame(RTX4080 + YOLOv5s)
-  - Actual performance on AWP datasets: to be tested
+  - Performance on AWP datasets: to be tested
 
 - **04- TBA** (Feel free to add any other fun and relevant projects or references here!)
 
