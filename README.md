@@ -31,7 +31,7 @@ A playground of open-source projects that relate to video-based animal behaviour
   - Focus: A practical workflow built around Smarter‑Labelme to annotate, train animal detectors, and classify behaviours.
   - How it works: Three streams — S1 annotate/train detector, S2 label behaviours leveraging the detector, S3 semi‑automate behaviour annotation for rapid iteration.
   - Promised animal behavior labeling speed: 0.1 s per frame(on a computer with a fast GPU); 1–2 s per frame(on an office laptop without GPU)
-  - Actual animal behavior labeling speed: to be tested.
+  - Actual animal behavior labeling speed on AWP dataset: to be tested.
 
 - **02 - Elhorst (2025): Browser‑Based Behaviour Coding**
   <p align="center">
