@@ -38,7 +38,7 @@ A playground of open-source projects that relate to video-based animal behaviour
     <img src="02-behave_2025/pic/0.png"  width="90%">
   </p>
 
-  - Paper: [BEHAVE - facilitating behaviour coding from videos with AI-detected animals - Elhorst et al. (2025)]([https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.70124](https://www.sciencedirect.com/science/article/pii/S1574954125001153))  
+  - Paper: [BEHAVE - facilitating behaviour coding from videos with AI-detected animals - Elhorst et al. (2025)](https://www.sciencedirect.com/science/article/pii/S1574954125001153) 
   - Source Code: [github](https://github.com/behave-app/behave) 
   - Website application address: [behave.claude-apps.com](https://behave.claude-apps.com/)
   - Focus: Zero‑install, in‑browser tool to code behaviour from long videos, using AI to skip background‑only sections.
