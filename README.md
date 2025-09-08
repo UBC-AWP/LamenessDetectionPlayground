@@ -18,6 +18,7 @@ A playground of open-source projects that relate to video-based animal behaviour
   - Focus: Pose estimation + multiple locomotion traits to automatically detect lameness in dairy cows.
   - How it works: Extracts gait keypoints from video, computes locomotion features, and trains classical ML models for lameness classification.
   - Promised classification accuracy: 76.6%(1 trait); 79.9%(3 most important traits); 80.1%(6 locomotion traits)
+  - Classification accuracy on lab data: to be tested
   
 - **01 - Price (2025): Animal Behaviour Inference Framework (Smarter‑Labelme + Behaviour Workflow)**
   <p align="center">
