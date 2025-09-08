@@ -17,7 +17,11 @@ A playground of open-source projects that relate to video-based animal behaviour
   - Source Code: [github](https://github.com/hrussel/lameness-detection)
   - Focus: Pose estimation + multiple locomotion traits to detect lameness in dairy cows automatically.
   - How it works: Extracts gait keypoints from video, computes locomotion features, and trains classical ML models for lameness classification.
+<<<<<<< HEAD
   - Promised **normal vs. lame** classification accuracy: 80.1%(6 locomotion traits)
+=======
+  - Promised <b>normal vs. lame</b> classification accuracy: 80.1%
+>>>>>>> 1b03146372a9a269b63100896ca47a68c3f698a5
   - Performance on AWP datasets: to be tested.
   
 - **01 - Price (2025): Animal Behaviour Inference Framework (Smarter‑Labelme + Behaviour Workflow)**
