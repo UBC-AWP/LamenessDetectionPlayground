@@ -4,7 +4,7 @@
 
 # LamenessDetectionPlayground
 
-A playground of open-source projects that relate to video-based animal behaviour analysis and dairy-cow lameness detection. This repository aggregates code and docs from several interesting reference implementations so they can be compared, learned from, and extended side-by-side. Contributions that add more relevant projects are warmly welcome.
+A playground of open-source projects that relate to video-based animal behaviour analysis. This repository aggregates code and docs from several interesting reference implementations so they can be compared, learned from, and extended side-by-side. Contributions that add more relevant projects are warmly welcome.
 
 ## What’s Inside
 
